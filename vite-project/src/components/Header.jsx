@@ -1,13 +1,16 @@
 import React, { useState } from "react";
-import { Link, NavLink } from "react-router";
+import { Link, NavLink, useNavigate } from "react-router";
 import { assets } from "../assets/assets.js";
 
 export const Header = () => {
     const [visible, setvisible] = useState(false);
+    const handleback = () => {
+        useNavigate()
+    }
     return (
         <section>
             <div className="flex items-center justify-between py-5 text-sm text-gray-700">
-                <img src={assets.logo} alt="" className="w-36" />
+                <img src={assets.logo} alt="" className="w-36" onClick={handleback}/>
 
                 <ul className="hidden sm:flex gap-5 text-sm text-gray-700">
                     <NavLink

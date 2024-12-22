@@ -5,6 +5,8 @@ import { Collection } from "./pages/Collection"
 import { About } from "./pages/About"
 import { Contact } from "./pages/Contact"
 import { Layout } from "./pages/Layout"
+// import { Productitem } from "./components/Productitem"
+import { Product } from "./pages/Product"
 
 const router = createBrowserRouter([
   {
@@ -13,11 +15,15 @@ const router = createBrowserRouter([
     children : [
       {
         path : '',
-        element : <Home />
+        element : <Home />,
       },
       {
         path : '/collection',
         element : <Collection/>
+      },
+      {
+        path : '/product/:productId',
+        element : <Product />
       },
       {
         path : '/about',

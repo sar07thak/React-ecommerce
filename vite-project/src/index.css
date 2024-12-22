@@ -2,7 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-
+*{
+  /* background-color: #a78bfa; */
+}
 /*  <uniquifier>: Use a unique and descriptive class name
  <weight>: Use a value from 300 to 900 */
 /* 
