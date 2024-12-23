@@ -5,7 +5,7 @@ export const NewsLetterBox = () => {
         e.preventDEfault();
     }
   return (
-    <div className='text-center'>
+    <div className='text-center  rounded-xl shadow-[#414141] shadow-2xl py-5 px-2'>
         <p className='text-2xl font-medium text-gray-800'>Subscribe now & get 20% off</p>
         <p className='text-gray-400 mt-3'>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut, eaque!

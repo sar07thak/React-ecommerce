@@ -14,15 +14,15 @@ export const LatestCollection = () => {
   }, []);
 
   return (
-    <div className="my-10">
-      <div className="text-center py-8 text-3xl">
+    <div className="my-12 rounded-3xl shadow-[#414141] shadow-2xl  ">
+      <div className="text-center py-8 text-3xl rounded-2xl ">
         <Title text1={'LATEST'} text2={'COLLECTION'} />
-        <p className="W-3/4 m-auto text-xs sm:text-sm md:text-base text-gray-600">
+        <p className="W-3/4 m-auto text-xs sm:text-sm md:text-base px-5 text-gray-600">
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum tempore in voluptatibus ex autem illum dolorem numquam dicta magnam nemo! Nisi expedita ipsam neque quaerat, dolores officiis repellat enim unde.
         </p>
     </div>
     {/* render product item */}
-    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 gap-y-6">
+    <div className="p-5 rounded-2xl grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 gap-y-6">
         {
             latestCollection.map((curItem,index) => {
                 return <Productitem key={index} id={curItem._id} image={curItem.image} name={curItem.name} price={curItem.price} />
