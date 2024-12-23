@@ -10,9 +10,11 @@ export const Header = () => {
     return (
         <section>
             <div className="flex items-center justify-between py-5 text-sm text-gray-700">
+                <NavLink to='/'>
                 <h1 className="text-4xl  text-[#414141] font-mono leading-relaxed font-normal ">
                     --ETERNA--
                 </h1>
+                </NavLink>
                 {/* <img src={assets.logo} alt="" className="w-36" onClick={handleback}/> */}
                 <ul className="hidden sm:flex gap-5 text-sm text-gray-700">
                     <NavLink
