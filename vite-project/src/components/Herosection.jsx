@@ -10,14 +10,14 @@ export const Herosection = () => {
 
     var typedata = new Typed('.auto-type',{
       strings : [
-        'latest arrivals..',
-        'Trending Now..',
-        'just Dropped..',
+        'latest arrivals',
+        'Trending Now',
+        'just Dropped',
       ],
       loop : true,
-      typeSpeed : 100 ,
-      backDelay : 2000,    
-      backSpeed : 80 ,
+      typeSpeed : 150 ,
+      backSpeed : 120 ,
+      backDelay : 1000,    
     });
 
     const typed = new Typed(typedElement.current, typedata);
@@ -31,30 +31,29 @@ export const Herosection = () => {
 
 
   return (
-    <div className="flex flex-col sm:flex-row rounded-3xl bg-[#FFEDEB] shadow-2xl shadow-[#414141] ">
+    <div className="flex flex-col sm:flex-row rounded-3xl shadow-2xl shadow-[#414141] ">
       
-      <div className="w-full sm:w-1/2  rounded-tl-3xl flex items-center justify-center py-10 sm:py-0 bg-[#FFB6AD] ">
-        <div className="text-[#414141]">
-          <div className="flex items-center gap-2 bg-[#FFB6AD] ">
-            <p className="w-8 md:w-11 h-[1px] bg-[#414141]"></p>
-            <p className="font-semibold text-sm md:text-base bg-[#FFB6AD]  ">
+      <div className="w-full sm:w-1/2  rounded-tl-3xl flex flex-col items-center bg-[#FFB6AD] text-[#414141] justify-center py-10 sm:py-0  ">
+        
+          <div className="flex items-center gap-2 bg-[#FFB6AD] mb-3">
+            <p className="w-8 md:w-11 h-[1px] bg-[#414141] "></p>
+            <p className="font-semibold text-sm md:text-base bg-[#FFB6AD] ">
               OUR BESTSELLER
             </p>
           </div>
-       
                       
-          <div className=" bg-[#FFB6AD] ">
-            <span ref={typedElement}  className="text-3xl sm:py-3 lg:text-5xl font-medium auto-type text-[#414141] bg-transparent ">
+          <div>
+            <span ref={typedElement}  className="text-3xl sm:py-3 lg:text-5xl font-medium auto-type text-[#414141] bg-[#FFB6AD] ">
             </span>
           </div>
-
-          <div className="flex items-center gap-2 bg-[#FFB6AD] pt-3">
+          
+          <div className="flex  items-center gap-2 bg-[#FFB6AD] mt-3">
             <p className="font-semibold text-sm md:text-base bg-[#FFB6AD] ">
               SHOP NOW
             </p>
             <p className="w-8 md:w-11 h-[1px] bg-[#414141] "></p>
           </div>
-        </div>
+        
       </div>
       {/* hero right side */}
 
@@ -66,10 +65,3 @@ export const Herosection = () => {
     </div>
   );
 };
-
-
-          {/* <div className=" bg-[#FFB6AD]">
-            <span className="auto-type text-3xl sm:py-3 lg:text-5xl leading-relaxed font-normal text-[#414141] bg-[#FFB6AD]"></span>
-          </div> */}
-
-             {/* <span class="text-3xl sm:py-3 lg:text-5xl leading-relaxed font-normal text-[#414141] bg-[#FFB6AD] "> */}
