@@ -4,9 +4,9 @@ import { useParams } from "react-router";
 import { assets } from "../assets/assets";
 
 export const Product = () => {
-  const { products, currency } = useContext(ShopContext);
+  const { products, currency , addToCart } = useContext(ShopContext);
   const { productId } = useParams();
-  console.log(productId);
+  // console.log(productId);
   const [productData, setproductData] = useState(false);
   const [image, setImage] = useState("");
   const [size, setsize] = useState("");
@@ -14,8 +14,8 @@ export const Product = () => {
   useEffect(() => {
     products.map((item) => {
       if (item._id === productId) {
-        console.log("hi");
-        console.log(item.image);
+        // console.log("hi");
+        // console.log(item.image);
         setproductData(item);
         setImage(item.image[0]);
       }
@@ -45,6 +45,7 @@ export const Product = () => {
             <img className="w-full h-auto" src={image} alt="" srcset="" />
           </div>
         </div>
+        
         {/* -----------product info--------------- */}
         <div className="flex-1">
           <p className="font-medium text-2xl">{productData.name}</p>
@@ -79,7 +80,7 @@ export const Product = () => {
               ))}
             </div>
           </div>
-          <button className="bg-black text-white px-8 py-3 text-sm active:bg-gray-700">ADD TO CART</button>
+          <button onClick={()=>addToCart(productData._id,size)} className="bg-black text-white px-8 py-3 text-sm active:bg-gray-700">ADD TO CART</button>
           <hr className='mt-8 sm-w-4/5' />
         <div className='text-sm text-gray-500 mt-5 flex flex-col gap-1'>
                <p>100% Original product</p>
